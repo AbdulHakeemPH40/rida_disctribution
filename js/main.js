@@ -285,6 +285,12 @@ function initFrameworkTimeline() {
 function initGSAPAnimations() {
   gsap.registerPlugin(ScrollTrigger);
 
+  // Mobile browsers resize the viewport when the address bar hides/shows
+  // mid-scroll. Without this, ScrollTrigger treats that as a real resize
+  // and recalculates every trigger's start/end position while the user
+  // is actively scrolling — the #1 cause of stutter/jump on phones.
+  ScrollTrigger.config({ ignoreMobileResize: true });
+
   // Hero animations
   animateHero();
 
@@ -339,18 +345,24 @@ function animateRevealElements() {
   // Cards inside .stagger-cards are animated by the stagger tween below —
   // tweening them here too made two tweens fight over the same transform
   // and cards could strand mid-flight (visible as an offset "orphan" card).
+  // Apple-style deceleration — long, smooth settle rather than a snappy
+  // stop. Paired with a subtle scale so cards feel like they're easing
+  // into focus, not just sliding.
+  const APPLE_EASE = 'cubic-bezier(.16,1,.3,1)';
+
   gsap.utils.toArray('.reveal-up').forEach(el => {
     if (el.closest('.stagger-cards')) return;
     gsap.fromTo(el,
-      { y: 60, opacity: 0 },
+      { y: 70, opacity: 0, scale: .97 },
       {
         y: 0,
         opacity: 1,
-        duration: 0.8,
-        ease: 'power3.out',
+        scale: 1,
+        duration: 1.1,
+        ease: APPLE_EASE,
         scrollTrigger: {
           trigger: el,
-          start: 'top 88%',
+          start: 'top 90%',
           toggleActions: 'play none none none'
         }
       }
@@ -360,15 +372,16 @@ function animateRevealElements() {
   // Reveal from left
   gsap.utils.toArray('.reveal-left').forEach(el => {
     gsap.fromTo(el,
-      { x: -60, opacity: 0 },
+      { x: -60, opacity: 0, scale: .97 },
       {
         x: 0,
         opacity: 1,
-        duration: 0.8,
-        ease: 'power3.out',
+        scale: 1,
+        duration: 1.1,
+        ease: APPLE_EASE,
         scrollTrigger: {
           trigger: el,
-          start: 'top 85%',
+          start: 'top 87%',
           toggleActions: 'play none none none'
         }
       }
@@ -378,36 +391,39 @@ function animateRevealElements() {
   // Reveal from right
   gsap.utils.toArray('.reveal-right').forEach(el => {
     gsap.fromTo(el,
-      { x: 60, opacity: 0 },
+      { x: 60, opacity: 0, scale: .97 },
       {
         x: 0,
         opacity: 1,
-        duration: 0.8,
-        ease: 'power3.out',
+        scale: 1,
+        duration: 1.1,
+        ease: APPLE_EASE,
         scrollTrigger: {
           trigger: el,
-          start: 'top 85%',
+          start: 'top 87%',
           toggleActions: 'play none none none'
         }
       }
     );
   });
 
-  // Staggered cards
+  // Staggered cards — each card eases in slightly after the last, like
+  // Apple's product-grid reveals, instead of popping in together.
   gsap.utils.toArray('.stagger-cards').forEach(container => {
     const cards = container.querySelectorAll('.card, .portfolio-card, .segment-card, .region-card, .stat-card-light, .vision-card, .contact-card');
     if (cards.length > 0) {
       gsap.fromTo(cards,
-        { y: 80, opacity: 0 },
+        { y: 70, opacity: 0, scale: .96 },
         {
           y: 0,
           opacity: 1,
-          duration: 0.6,
-          stagger: 0.12,
-          ease: 'power3.out',
+          scale: 1,
+          duration: .9,
+          stagger: 0.1,
+          ease: APPLE_EASE,
           scrollTrigger: {
             trigger: container,
-            start: 'top 82%',
+            start: 'top 85%',
             toggleActions: 'play none none none'
           }
         }

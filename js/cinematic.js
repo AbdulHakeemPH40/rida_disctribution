@@ -10,16 +10,28 @@
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ── 1. Scroll progress bar ── */
+  /* ── 1. Scroll progress bar ──
+     rAF-batched: the raw 'scroll' event can fire many times per frame on
+     mobile, and writing to style.width on every one of those fights the
+     browser's own scroll compositing — a common source of janky-feeling
+     scroll on phones. Coalescing to one write per animation frame keeps
+     this off the scroll-critical path. */
   const progress = document.getElementById('scrollProgress');
+  let progressTicking = false;
   function updateProgress() {
     const h = document.documentElement;
     const max = h.scrollHeight - h.clientHeight;
     const scrolled = max > 0 ? h.scrollTop / max : 0;
     if (progress) progress.style.width = (scrolled * 100).toFixed(2) + '%';
+    progressTicking = false;
   }
-  window.addEventListener('scroll', updateProgress, { passive: true });
-  window.addEventListener('resize', updateProgress);
+  function requestProgressUpdate() {
+    if (progressTicking) return;
+    progressTicking = true;
+    requestAnimationFrame(updateProgress);
+  }
+  window.addEventListener('scroll', requestProgressUpdate, { passive: true });
+  window.addEventListener('resize', requestProgressUpdate);
   updateProgress();
 
   /* ── 1.5 World sourcing map: dot-matrix continents ──
