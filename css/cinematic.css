@@ -1744,3 +1744,33 @@ html, body { overflow-x: hidden; overflow-x: clip; }
   color: var(--gold-bright);
   transform: translateY(-2px);
 }
+
+/* ─── Country flags: real SVG artwork, not emoji ───
+   Windows lacks color flag-emoji fonts, so 🇵🇭 etc. rendered as literal
+   "PH" letters on desktop browsers while phones (Android/iOS have flag
+   fonts) showed real flags — same markup, inconsistent result. Inline
+   SVG flags render identically on every OS/browser. */
+.country-flag {
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.flag-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+/* Africa has no single national flag — a gold continent silhouette
+   avoids misrepresenting the whole continent as one country's flag. */
+.country-flag--continent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--green-500), var(--green-700));
+}
+.flag-svg--continent {
+  width: 60%;
+  height: 60%;
+  color: var(--gold-bright);
+}
