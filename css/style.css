@@ -778,18 +778,23 @@ p {
   background: var(--bg-gray-light);
   overflow: hidden;
   transition: background-color 0.4s ease;
+  position: relative;
 }
 
 .trust-bar-inner {
   text-align: center;
+  overflow: hidden;
+  max-width: 100%;
+  padding: 0;
 }
 
 .trust-logos {
   display: flex;
   align-items: center;
   gap: var(--space-lg);
-  animation: scroll-logos 30s linear infinite;
+  animation: scroll-logos 20s linear infinite;
   width: max-content;
+  padding-left: 0;
 }
 
 .trust-logos:hover {
