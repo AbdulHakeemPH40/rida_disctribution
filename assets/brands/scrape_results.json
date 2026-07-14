@@ -1,0 +1,169 @@
+{
+  "success": [
+    {
+      "brand": "Alaska",
+      "path": "C:\\Users\\Hakeem1\\OneDrive\\Desktop\\Rida\\assets\\brands\\alaska.png"
+    },
+    {
+      "brand": "Argentina",
+      "path": "C:\\Users\\Hakeem1\\OneDrive\\Desktop\\Rida\\assets\\brands\\argentina.png"
+    },
+    {
+      "brand": "Cheez Whiz",
+      "path": "C:\\Users\\Hakeem1\\OneDrive\\Desktop\\Rida\\assets\\brands\\cheez_whiz.png"
+    },
+    {
+      "brand": "Cobra",
+      "path": "C:\\Users\\Hakeem1\\OneDrive\\Desktop\\Rida\\assets\\brands\\cobra.png"
+    },
+    {
+      "brand": "Ding Dong",
+      "path": "C:\\Users\\Hakeem1\\OneDrive\\Desktop\\Rida\\assets\\brands\\ding_dong.png"
+    },
+    {
+      "brand": "Dutch Mill",
+      "path": "C:\\Users\\Hakeem1\\OneDrive\\Desktop\\Rida\\assets\\brands\\dutch_mill.png"
+    },
+    {
+      "brand": "Dynamite",
+      "path": "C:\\Users\\Hakeem1\\OneDrive\\Desktop\\Rida\\assets\\brands\\dynamite.png"
+    },
+    {
+      "brand": "Gardenia",
+      "path": "C:\\Users\\Hakeem1\\OneDrive\\Desktop\\Rida\\assets\\brands\\gardenia.png"
+    },
+    {
+      "brand": "Gatorade",
+      "path": "C:\\Users\\Hakeem1\\OneDrive\\Desktop\\Rida\\assets\\brands\\gatorade.png"
+    },
+    {
+      "brand": "Magnolia",
+      "path": "C:\\Users\\Hakeem1\\OneDrive\\Desktop\\Rida\\assets\\brands\\magnolia.png"
+    },
+    {
+      "brand": "Mug",
+      "path": "C:\\Users\\Hakeem1\\OneDrive\\Desktop\\Rida\\assets\\brands\\mug.png"
+    },
+    {
+      "brand": "Nagaraya",
+      "path": "C:\\Users\\Hakeem1\\OneDrive\\Desktop\\Rida\\assets\\brands\\nagaraya.png"
+    },
+    {
+      "brand": "Nestea",
+      "path": "C:\\Users\\Hakeem1\\OneDrive\\Desktop\\Rida\\assets\\brands\\nestea.png"
+    },
+    {
+      "brand": "Nestlé",
+      "path": "C:\\Users\\Hakeem1\\OneDrive\\Desktop\\Rida\\assets\\brands\\nestlé.png"
+    },
+    {
+      "brand": "Regent",
+      "path": "C:\\Users\\Hakeem1\\OneDrive\\Desktop\\Rida\\assets\\brands\\regent.png"
+    },
+    {
+      "brand": "Rufina",
+      "path": "C:\\Users\\Hakeem1\\OneDrive\\Desktop\\Rida\\assets\\brands\\rufina.png"
+    },
+    {
+      "brand": "Sapporo",
+      "path": "C:\\Users\\Hakeem1\\OneDrive\\Desktop\\Rida\\assets\\brands\\sapporo.png"
+    },
+    {
+      "brand": "Temple",
+      "path": "C:\\Users\\Hakeem1\\OneDrive\\Desktop\\Rida\\assets\\brands\\temple.png"
+    },
+    {
+      "brand": "White Rabbit",
+      "path": "C:\\Users\\Hakeem1\\OneDrive\\Desktop\\Rida\\assets\\brands\\white_rabbit.png"
+    }
+  ],
+  "failed": [
+    "555",
+    "Ajînomoto",
+    "Anmum",
+    "Annies",
+    "Bakeats",
+    "Barrio Fiesta",
+    "Bench",
+    "Bench Colonia",
+    "Besuto",
+    "Bongga",
+    "Boy Bawang",
+    "C2",
+    "Century Tuna",
+    "Cheez It",
+    "Coco",
+    "Coco Mama",
+    "Cow Bell",
+    "Datu Puti",
+    "Del Monte",
+    "Dr. Alvin",
+    "Fibisco",
+    "Frutos",
+    "Goodnom",
+    "Great Taste",
+    "Green Gold",
+    "Hazam",
+    "Hermano",
+    "J&J Maxx",
+    "Jack n Jill",
+    "Knorr",
+    "Kopiko",
+    "Krem Top",
+    "Kusinera",
+    "Lady's Choice",
+    "Ligo",
+    "Llanera",
+    "Lola Remedios",
+    "Lorins",
+    "Lucky Me!",
+    "Ludy's",
+    "M.Y. San",
+    "Malabon's Best",
+    "Maling",
+    "Mama Pina's",
+    "Mama Sita's",
+    "Maya",
+    "Mega Sardines",
+    "Mik Mik",
+    "Milcu",
+    "Monde",
+    "Mr Milk",
+    "Mr. Gulaman",
+    "Nissin",
+    "Nutri-Sack",
+    "Oishi",
+    "OK Wookie",
+    "Original Lumpia",
+    "Papa Ketchup",
+    "Payless",
+    "Prifood",
+    "Purefoods",
+    "Puto Molder",
+    "Ram",
+    "Ri-Chee",
+    "Rosal",
+    "Royal",
+    "Saba",
+    "Selecta",
+    "Senorita",
+    "Snowbear",
+    "Stick-O",
+    "Sugo",
+    "Suka Pinakurat",
+    "Sunshine",
+    "Super Delights",
+    "Super Golden",
+    "Super Misua",
+    "Tawas",
+    "Today's",
+    "Tomi",
+    "UFC",
+    "W.L.",
+    "White King",
+    "Wonderline",
+    "XO",
+    "Young's Town",
+    "Zonrox"
+  ]
+}

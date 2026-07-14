@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RiDA — Reliable Innovative Distribution Alliance</title>
+  <meta name="description"
+    content="RiDA — Reliable Innovative Distribution Alliance. UAE's trusted FMCG import and distribution company delivering global brands to local shelves across all 7 Emirates.">
+  <meta name="keywords"
+    content="FMCG distribution UAE, Dubai distribution company, UAE retail supply chain, FMCG import UAE, grocery distribution Dubai">
+  <meta name="author" content="RiDA">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="RiDA — Reliable Innovative Distribution Alliance">
+  <meta property="og:description"
+    content="UAE's trusted FMCG import and distribution company. From source to shelf, in every emirate.">
+  <meta property="og:image" content="assets/images/og-image.jpg">
+  <meta property="og:url" content="https://www.rida.ae">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RiDA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RiDA — Reliable Innovative Distribution Alliance">
+  <meta name="twitter:description" content="UAE's trusted FMCG import and distribution company.">
+  <meta name="twitter:image" content="assets/images/og-image.jpg">
+
+  <link rel="canonical" href="https://www.rida.ae">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&family=Cairo:wght@700&family=Tajawal:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cinematic.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "RiDA",
+    "alternateName": "Reliable Innovative Distribution Alliance",
+    "url": "https://www.rida.ae",
+    "logo": "assets/logos/logo_english.png",
+    "description": "UAE-based FMCG import and distribution company delivering global brands to local shelves across all seven emirates.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dubai",
+      "addressRegion": "Dubai",
+      "addressCountry": "AE"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+971-XX-XXX-XXXX",
+      "contactType": "sales",
+      "email": "info@rida.ae",
+      "availableLanguage": ["English", "Arabic"]
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ═══════════════ NAVBAR ═══════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="navbar-logo-link">
+        <img src="assets/logos/logo_english.png" data-logo-en="assets/logos/logo_english.png" data-logo-ar="assets/logos/logo_2_arabic.png" alt="RiDA Logo" class="navbar-logo">
+      </a>
+
+      <div class="navbar-links" id="navLinks">
+        <a href="#about" data-en="About" data-ar="من نحن">About</a>
+        <a href="#framework" data-en="Services" data-ar="خدماتنا">Services</a>
+        <a href="#coverage" data-en="Coverage" data-ar="التغطية">Coverage</a>
+        <a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+      </div>
+
+      <div class="navbar-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">EN | AR</button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="#about" data-en="About" data-ar="من نحن">About</a>
+    <a href="#framework" data-en="Services" data-ar="خدماتنا">Services</a>
+    <a href="#portfolio" data-en="Portfolio" data-ar="المنتجات">Portfolio</a>
+    <a href="#coverage" data-en="Coverage" data-ar="التغطية">Coverage</a>
+    <a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- ═══════════════ §1 HERO ═══════════════ -->
+  <section class="hero" id="hero">
+    <img class="hero-photo" src="assets/images/stock/hero.jpg" alt="" aria-hidden="true" onerror="this.remove()">
+    <div class="hero-content">
+      <span class="hero-label" data-en="From Source to Shelf" data-ar="من المصدر إلى الرف">From Source to Shelf</span>
+
+      <h1 class="hero-title">
+        <span class="word" data-en="FROM" data-ar="من">FROM</span>
+        <span class="word" data-en="SOURCE" data-ar="المصدر">SOURCE</span><br>
+        <span class="word highlight" data-en="TO" data-ar="إلى">TO</span>
+        <span class="word highlight" data-en="SHELF" data-ar="الرف">SHELF</span>
+      </h1>
+
+      <p class="hero-subtitle" data-en="— in every emirate. —" data-ar="— في كل إمارة. —">— in every emirate. —</p>
+
+      <p class="hero-tagline" data-en="UAE's Trusted FMCG Distribution Partner"
+        data-ar="شريك التوزيع الموثوق في الإمارات">UAE's Trusted FMCG Distribution Partner</p>
+
+      <div class="hero-ctas">
+        <a href="#coverage" class="btn btn-primary btn-lg" data-en="Explore Our Network" data-ar="استكشف شبكتنا">Explore
+          Our Network</a>
+        <a href="#contact" class="btn btn-accent btn-lg" data-en="Partner With Us" data-ar="كن شريكنا">Partner With
+          Us</a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span data-en="Scroll" data-ar="مرر">Scroll</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M19 12l-7 7-7-7" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ═══════════════ §2 TRUST BAR ═══════════════ -->
+  <section class="trust-bar" id="trust-bar">
+    <div class="trust-bar-inner container-wide">
+      <div class="trust-logos">
+        <div class="trust-logo-item">LuLu</div>
+        <div class="trust-logo-item">Carrefour</div>
+        <div class="trust-logo-item">Spinneys</div>
+        <div class="trust-logo-item">Choithrams</div>
+        <div class="trust-logo-item">Marriott</div>
+        <div class="trust-logo-item">Hilton</div>
+        <div class="trust-logo-item">Aster Pharmacy</div>
+        <div class="trust-logo-item">Grandiose</div>
+        <!-- Duplicate for seamless loop -->
+        <div class="trust-logo-item">LuLu</div>
+        <div class="trust-logo-item">Carrefour</div>
+        <div class="trust-logo-item">Spinneys</div>
+        <div class="trust-logo-item">Choithrams</div>
+        <div class="trust-logo-item">Marriott</div>
+        <div class="trust-logo-item">Hilton</div>
+        <div class="trust-logo-item">Aster Pharmacy</div>
+        <div class="trust-logo-item">Grandiose</div>
+      </div>
+      <p class="trust-tagline" data-en="Trusted by leading retailers & suppliers across the UAE"
+        data-ar="موثوق من قبل كبار تجار التجزئة والموردين في الإمارات">Trusted by leading retailers & suppliers across
+        the UAE</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════ §3 ABOUT ═══════════════ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="section-label" data-en="Who We Are" data-ar="من نحن">Who We Are</span>
+
+          <h2 class="about-headline" data-en="Reliable. Innovative. Distribution Alliance."
+            data-ar="موثوقة. مبتكرة. تحالف توزيع.">Reliable. Innovative. Distribution Alliance.</h2>
+
+          <p class="about-description reveal-up"
+            data-en="RiDA is a UAE-based FMCG import and distribution company delivering global brands to local shelves across all seven emirates. We handle everything from sourcing and compliance to warehousing, distribution, and retail activation."
+            data-ar="ريدا هي شركة استيراد وتوزيع سلع استهلاكية سريعة الحركة مقرها الإمارات، توصل العلامات التجارية العالمية إلى الرفوف المحلية عبر جميع الإمارات السبع. نتولى كل شيء من التوريد والامتثال إلى التخزين والتوزيع وتفعيل المبيعات.">
+            RiDA is a UAE-based FMCG import and distribution company delivering global brands to local shelves across
+            all seven emirates. We handle everything from sourcing and compliance to warehousing, distribution, and
+            retail activation.</p>
+        </div>
+
+        <div class="about-image reveal-right">
+          <figure class="about-photo">
+            <img src="assets/images/stock/warehouse.jpg"
+              alt="Modern FMCG distribution warehouse with stocked racks" loading="lazy">
+            <figcaption class="about-photo-badge">
+              <span class="about-photo-badge-number">7</span>
+              <span class="about-photo-badge-label" data-en="Emirates Covered" data-ar="إمارات مغطاة">Emirates
+                Covered</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Three Pillars -->
+      <div class="pillars-grid stagger-cards">
+        <div class="pillar-card card reveal-up">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg></div>
+          <h4 class="pillar-title" data-en="Trust" data-ar="الثقة">Trust</h4>
+          <p class="pillar-text"
+            data-en="Building lasting partnerships with brands and retailers through transparency and consistency."
+            data-ar="بناء شراكات دائمة مع العلامات التجارية وتجار التجزئة من خلال الشفافية والاتساق.">Building lasting
+            partnerships with brands and retailers through transparency and consistency.</p>
+        </div>
+
+        <div class="pillar-card card reveal-up">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5" />
+              <path d="M9 18h6" />
+              <path d="M10 22h4" />
+            </svg></div>
+          <h4 class="pillar-title" data-en="Innovation" data-ar="الابتكار">Innovation</h4>
+          <p class="pillar-text"
+            data-en="Embracing modern logistics, data-driven planning, and digital supply chain solutions."
+            data-ar="احتضان الخدمات اللوجستية الحديثة والتخطيط القائم على البيانات وحلول سلسلة التوريد الرقمية.">
+            Embracing modern logistics, data-driven planning, and digital supply chain solutions.</p>
+        </div>
+
+        <div class="pillar-card card reveal-up">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <circle cx="12" cy="12" r="6" />
+              <circle cx="12" cy="12" r="2" />
+            </svg></div>
+          <h4 class="pillar-title" data-en="Precision" data-ar="الدقة">Precision</h4>
+          <p class="pillar-text"
+            data-en="Delivering with accuracy, compliance, and attention to every detail in the supply chain."
+            data-ar="التسليم بالدقة والامتثال والاهتمام بكل تفصيل في سلسلة التوريد.">Delivering with accuracy,
+            compliance, and attention to every detail in the supply chain.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ §4 FRAMEWORK ═══════════════ -->
+  <section class="section section-alt" id="framework">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-en="How We Work" data-ar="كيف نعمل">How We Work</span>
+        <h2 class="section-title" data-en="Our 5-Step Framework" data-ar="إطارنا المكون من 5 خطوات">Our 5-Step Framework
+        </h2>
+        <p class="section-subtitle" data-en="From sourcing to shelf — every step managed with precision."
+          data-ar="من التوريد إلى الرف — كل خطوة تُدار بدقة.">From sourcing to shelf — every step managed with
+          precision.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-line">
+          <div class="timeline-progress" id="timelineProgress"></div>
+        </div>
+
+        <div class="timeline-nodes" id="timelineNodes">
+          <div class="timeline-node active" data-step="0">
+            <div class="timeline-dot">01</div>
+            <div class="timeline-label" data-en="Sourcing" data-ar="التوريد">Sourcing</div>
+          </div>
+          <div class="timeline-node" data-step="1">
+            <div class="timeline-dot">02</div>
+            <div class="timeline-label" data-en="Compliance" data-ar="الامتثال">Compliance</div>
+          </div>
+          <div class="timeline-node" data-step="2">
+            <div class="timeline-dot">03</div>
+            <div class="timeline-label" data-en="Warehousing" data-ar="التخزين">Warehousing</div>
+          </div>
+          <div class="timeline-node" data-step="3">
+            <div class="timeline-dot">04</div>
+            <div class="timeline-label" data-en="Distribution" data-ar="التوزيع">Distribution</div>
+          </div>
+          <div class="timeline-node" data-step="4">
+            <div class="timeline-dot">05</div>
+            <div class="timeline-label" data-en="Activation" data-ar="التفعيل">Activation</div>
+          </div>
+        </div>
+
+        <div class="framework-detail reveal-up" id="frameworkDetail">
+          <div class="framework-detail-title">
+            <span class="framework-detail-number">01</span>
+            <span data-en="Global Sourcing" data-ar="التوريد العالمي">Global Sourcing</span>
+          </div>
+          <p class="framework-detail-text"
+            data-en="We source premium FMCG products from over 20 countries across Europe, Asia, the Middle East, and North America. Every product is vetted for quality, compliance, and market demand."
+            data-ar="نورد منتجات استهلاكية سريعة الحركة متميزة من أكثر من 20 دولة عبر أوروبا وآسيا والشرق الأوسط وأمريكا الشمالية. كل منتج يتم فحصه للجودة والامتثال ومتطلبات السوق.">
+            We source premium FMCG products from over 20 countries across Europe, Asia, the Middle East, and North
+            America. Every product is vetted for quality, compliance, and market demand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ §6 GLOBAL SOURCING ═══════════════ -->
+  <section class="section section-dark" id="sourcing-globe">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-en="Global Sourcing" data-ar="التوريد العالمي">Global Sourcing</span>
+        <h2 class="section-title" data-en="We Source From 5 Key Countries" data-ar="نورد من 5 دول رئيسية">We Source
+          From 5 Key Countries</h2>
+        <p class="section-subtitle"
+          data-en="Premium FMCG products sourced directly from trusted manufacturers worldwide."
+          data-ar="منتجات استهلاكية متميزة من مصادر موثوقة حول العالم.">Premium FMCG products sourced directly from
+          trusted manufacturers worldwide.</p>
+      </div>
+
+      <div class="sourcing-globe-layout">
+        <!-- Left: dot-matrix world map with sourcing routes -->
+        <div class="globe-wrapper reveal-left">
+          <div class="world-map" id="worldMap">
+            <svg class="world-map-svg" viewBox="0 40 1000 370" xmlns="http://www.w3.org/2000/svg" role="img"
+              aria-label="World map showing RiDA sourcing countries connected to the UAE hub">
+              <!-- dot-matrix continents generated by cinematic.js -->
+              <g class="world-dots" id="worldDots"></g>
+              <g class="world-routes">
+                <path class="route-line" d="M718.1,191.7 Q690,158 650.8,182.8" />
+                <path class="route-line" style="animation-delay:.5s" d="M779.2,206.9 Q722,150 650.8,182.8" />
+                <path class="route-line" style="animation-delay:1s" d="M794.4,204.2 Q730,138 650.8,182.8" />
+                <path class="route-line" style="animation-delay:1.5s" d="M838.9,213.9 Q752,124 650.8,182.8" />
+                <path class="route-line" style="animation-delay:2s" d="M550,244.4 Q592,222 650.8,182.8" />
+                <g class="route-particles">
+                  <circle class="route-particle" r="3">
+                    <animateMotion dur="3.2s" begin="0s" repeatCount="indefinite"
+                      path="M718.1,191.7 Q690,158 650.8,182.8" />
+                  </circle>
+                  <circle class="route-particle" r="3">
+                    <animateMotion dur="3.6s" begin=".6s" repeatCount="indefinite"
+                      path="M779.2,206.9 Q722,150 650.8,182.8" />
+                  </circle>
+                  <circle class="route-particle" r="3">
+                    <animateMotion dur="3.8s" begin="1.2s" repeatCount="indefinite"
+                      path="M794.4,204.2 Q730,138 650.8,182.8" />
+                  </circle>
+                  <circle class="route-particle" r="3">
+                    <animateMotion dur="4.2s" begin="1.8s" repeatCount="indefinite"
+                      path="M838.9,213.9 Q752,124 650.8,182.8" />
+                  </circle>
+                  <circle class="route-particle" r="3">
+                    <animateMotion dur="3.4s" begin="2.4s" repeatCount="indefinite"
+                      path="M550,244.4 Q592,222 650.8,182.8" />
+                  </circle>
+                </g>
+              </g>
+              <g class="world-markers">
+                <g class="world-marker" data-country="India" transform="translate(718.1,191.7)">
+                  <circle class="marker-ring" r="6" />
+                  <circle class="marker-dot" r="5" />
+                  <text class="marker-label" x="4" y="-14" text-anchor="middle" data-en="India"
+                    data-ar="الهند">India</text>
+                </g>
+                <g class="world-marker" data-country="Thailand" transform="translate(779.2,206.9)">
+                  <circle class="marker-ring" r="6" />
+                  <circle class="marker-dot" r="5" />
+                  <text class="marker-label" x="-12" y="20" text-anchor="end" data-en="Thailand"
+                    data-ar="تايلاند">Thailand</text>
+                </g>
+                <g class="world-marker" data-country="Vietnam" transform="translate(794.4,204.2)">
+                  <circle class="marker-ring" r="6" />
+                  <circle class="marker-dot" r="5" />
+                  <text class="marker-label" x="13" y="-8" text-anchor="start" data-en="Vietnam"
+                    data-ar="فيتنام">Vietnam</text>
+                </g>
+                <g class="world-marker" data-country="Philippines" transform="translate(838.9,213.9)">
+                  <circle class="marker-ring" r="6" />
+                  <circle class="marker-dot" r="5" />
+                  <text class="marker-label" x="14" y="6" text-anchor="start" data-en="Philippines"
+                    data-ar="الفلبين">Philippines</text>
+                </g>
+                <g class="world-marker" data-country="Africa" transform="translate(550,244.4)">
+                  <circle class="marker-ring" r="6" />
+                  <circle class="marker-dot" r="5" />
+                  <text class="marker-label" x="0" y="28" text-anchor="middle" data-en="Africa"
+                    data-ar="أفريقيا">Africa</text>
+                </g>
+                <g class="world-marker world-marker-hub" transform="translate(650.8,182.8)">
+                  <circle class="hub-halo" r="16" />
+                  <circle class="marker-ring" r="9" />
+                  <circle class="marker-dot" r="7" />
+                  <text class="marker-label" x="0" y="-18" text-anchor="middle" data-en="UAE • HQ"
+                    data-ar="الإمارات • المقر">UAE • HQ</text>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Right: Country sourcing cards -->
+        <div class="countries-list reveal-right">
+          <div class="country-card" data-country="Philippines" tabindex="0">
+            <span class="country-index">01</span>
+            <div class="country-flag">🇵🇭</div>
+            <div class="country-content">
+              <h4 class="country-name">Philippines <span class="country-route">UAE ← PH</span></h4>
+              <p class="country-products">Snacks · Coconut · Beverages</p>
+            </div>
+            <div class="country-arrow">→</div>
+          </div>
+
+          <div class="country-card" data-country="India" tabindex="0">
+            <span class="country-index">02</span>
+            <div class="country-flag">🇮🇳</div>
+            <div class="country-content">
+              <h4 class="country-name">India <span class="country-route">UAE ← IN</span></h4>
+              <p class="country-products">Spices · Rice · Snacks</p>
+            </div>
+            <div class="country-arrow">→</div>
+          </div>
+
+          <div class="country-card" data-country="Thailand" tabindex="0">
+            <span class="country-index">03</span>
+            <div class="country-flag">🇹🇭</div>
+            <div class="country-content">
+              <h4 class="country-name">Thailand <span class="country-route">UAE ← TH</span></h4>
+              <p class="country-products">Beverages · Sauces · Coffee</p>
+            </div>
+            <div class="country-arrow">→</div>
+          </div>
+
+          <div class="country-card" data-country="Vietnam" tabindex="0">
+            <span class="country-index">04</span>
+            <div class="country-flag">🇻🇳</div>
+            <div class="country-content">
+              <h4 class="country-name">Vietnam <span class="country-route">UAE ← VN</span></h4>
+              <p class="country-products">Coffee · Noodles · Snacks</p>
+            </div>
+            <div class="country-arrow">→</div>
+          </div>
+
+          <div class="country-card" data-country="Africa" tabindex="0">
+            <span class="country-index">05</span>
+            <div class="country-flag">AF</div>
+            <div class="country-content">
+              <h4 class="country-name">Africa <span class="country-route">UAE ← AF</span></h4>
+              <p class="country-products">Cocoa · Coffee · Spices</p>
+            </div>
+            <div class="country-arrow">→</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ §7 UAE COVERAGE ═══════════════ -->
+  <section class="section" id="coverage">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-en="UAE Distribution" data-ar="التوزيع في الإمارات">UAE Distribution</span>
+        <h2 class="section-title" data-en="Across All 7 Emirates" data-ar="عبر جميع الإمارات السبع">Across All 7
+          Emirates</h2>
+        <p class="section-subtitle" data-en="Complete coverage from Abu Dhabi to Ras Al Khaimah."
+          data-ar="تغطية كاملة من أبوظبي إلى رأس الخيمة.">Complete coverage from Abu Dhabi to Ras Al Khaimah.</p>
+      </div>
+
+      <div class="coverage-content">
+        <div class="uae-map-container reveal-left">
+          <div class="uae-map-placeholder">
+            <div class="uae-map" id="uaeMap">
+              <svg class="uae-map-svg" viewBox="0 0 760 560" xmlns="http://www.w3.org/2000/svg" role="img"
+                aria-label="Map of the United Arab Emirates with all seven emirates marked">
+                <defs>
+                  <linearGradient id="uaeLandGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#2E8B57" />
+                    <stop offset=".55" stop-color="#1E6B3A" />
+                    <stop offset="1" stop-color="#0C4A28" />
+                  </linearGradient>
+                </defs>
+                <!-- extruded base for 3D depth -->
+                <path class="uae-land-shadow"
+                  d="M29 323 L161 309 L321 301 L438 272 L489 213 L526 191 L569 151 L606 110 L664 74 L683 37 L694 94 L723 147 L726 191 L701 213 L679 257 L640 306 L613 397 L555 540 L172 494 Z" />
+                <path class="uae-land"
+                  d="M29 323 L161 309 L321 301 L438 272 L489 213 L526 191 L569 151 L606 110 L664 74 L683 37 L694 94 L723 147 L726 191 L701 213 L679 257 L640 306 L613 397 L555 540 L172 494 Z" />
+                <g class="uae-map-markers">
+                  <g class="uae-map-marker" transform="translate(434,272)">
+                    <circle class="marker-ring" r="7" />
+                    <circle class="marker-dot" r="5.5" />
+                    <text class="marker-label" x="0" y="30" text-anchor="middle" data-en="Abu Dhabi"
+                      data-ar="أبوظبي">Abu Dhabi</text>
+                  </g>
+                  <g class="uae-map-marker" transform="translate(569,153)">
+                    <circle class="marker-ring" r="7" />
+                    <circle class="marker-dot" r="5.5" />
+                    <text class="marker-label" x="-14" y="6" text-anchor="end" data-en="Dubai"
+                      data-ar="دبي">Dubai</text>
+                  </g>
+                  <g class="uae-map-marker" transform="translate(583,140)">
+                    <circle class="marker-ring" r="7" />
+                    <circle class="marker-dot" r="5.5" />
+                    <text class="marker-label" x="15" y="11" text-anchor="start" data-en="Sharjah"
+                      data-ar="الشارقة">Sharjah</text>
+                  </g>
+                  <g class="uae-map-marker" transform="translate(590,131)">
+                    <circle class="marker-ring" r="7" />
+                    <circle class="marker-dot" r="5.5" />
+                    <text class="marker-label" x="13" y="-8" text-anchor="start" data-en="Ajman"
+                      data-ar="عجمان">Ajman</text>
+                  </g>
+                  <g class="uae-map-marker" transform="translate(606,109)">
+                    <circle class="marker-ring" r="7" />
+                    <circle class="marker-dot" r="5.5" />
+                    <text class="marker-label" x="-13" y="-3" text-anchor="end" data-en="Umm Al Quwain"
+                      data-ar="أم القيوين">Umm Al Quwain</text>
+                  </g>
+                  <g class="uae-map-marker" transform="translate(663,75)">
+                    <circle class="marker-ring" r="7" />
+                    <circle class="marker-dot" r="5.5" />
+                    <text class="marker-label" x="-14" y="1" text-anchor="end" data-en="Ras Al Khaimah"
+                      data-ar="رأس الخيمة">Ras Al Khaimah</text>
+                  </g>
+                  <g class="uae-map-marker" transform="translate(720,173)">
+                    <circle class="marker-ring" r="7" />
+                    <circle class="marker-dot" r="5.5" />
+                    <text class="marker-label" x="8" y="28" text-anchor="end" data-en="Fujairah"
+                      data-ar="الفجيرة">Fujairah</text>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="emirates-grid">
+              <span class="emirate-tag"><span class="emirate-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              Abu Dhabi</span>
+              <span class="emirate-tag"><span class="emirate-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              Dubai</span>
+              <span class="emirate-tag"><span class="emirate-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              Sharjah</span>
+              <span class="emirate-tag"><span class="emirate-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              Ajman</span>
+              <span class="emirate-tag"><span class="emirate-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              Umm Al Quwain</span>
+              <span class="emirate-tag"><span class="emirate-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              Ras Al Khaimah</span>
+              <span class="emirate-tag"><span class="emirate-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              Fujairah</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="coverage-stats stagger-cards">
+          <div class="stat-card-light reveal-up">
+            <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+            <div class="stat-number" data-count="50">0</div>
+            <div class="stat-label" data-en="Fleet Vehicles" data-ar="مركبات الأسطول">Fleet Vehicles</div>
+          </div>
+
+          <div class="stat-card-light reveal-up">
+            <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="2" x2="22" y1="12" y2="12"/><line x1="12" x2="12" y1="2" y2="22"/><path d="m20 16-4-4 4-4"/><path d="m4 8 4 4-4 4"/><path d="m16 4-4 4-4-4"/><path d="m8 20 4-4 4 4"/></svg></span>
+            <div class="stat-number" data-count="100" data-suffix="%">0</div>
+            <div class="stat-label" data-en="Cold Chain Coverage" data-ar="تغطية سلسلة التبريد">Cold Chain Coverage
+            </div>
+          </div>
+
+          <div class="stat-card-light reveal-up">
+            <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" x2="12" y1="22" y2="12"/></svg></span>
+            <div class="stat-number" data-count="1000" data-prefix="">0</div>
+            <div class="stat-label" data-en="SKUs Managed" data-ar="وحدات مُدارة">SKUs Managed</div>
+          </div>
+
+          <div class="stat-card-light reveal-up">
+            <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+            <div class="stat-number" data-en="Same Day" data-ar="نفس اليوم">Same Day</div>
+            <div class="stat-label" data-en="Dispatch Available" data-ar="الإرسال متاح">Dispatch Available</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ §8 CLIENT SEGMENTS ═══════════════ -->
+  <section class="section section-alt" id="segments">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-en="Our Clients" data-ar="عملاؤنا">Our Clients</span>
+        <h2 class="section-title" data-en="Who We Serve" data-ar="من نخدم">Who We Serve</h2>
+        <p class="section-subtitle" data-en="Building bridges between global brands and local markets."
+          data-ar="بناء جسور بين العلامات التجارية العالمية والأسواق المحلية.">Building bridges between global brands
+          and local markets.</p>
+      </div>
+
+      <div class="segments-grid stagger-cards">
+        <div class="segment-card card reveal-up">
+          <div class="segment-photo"><img src="assets/images/stock/supermarket.jpg" alt="Supermarket produce shelves" loading="lazy">
+          </div>
+          <div class="segment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" />
+              <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+              <path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" />
+              <path d="M2 7h20" />
+              <path
+                d="M22 7v3a2 2 0 0 1-2 2 2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" />
+            </svg></div>
+          <h4 class="segment-name" data-en="Supermarkets & Retail" data-ar="السوبرماركت وتجزئة">Supermarkets & Retail
+          </h4>
+          <p class="segment-desc" data-en="Lulu, Carrefour, Spinneys, Choithrams, and independent grocers"
+            data-ar="لولو، كارفور، سبينيز، شويترامز، والبقالون المستقلون">Lulu, Carrefour, Spinneys, Choithrams, and
+            independent grocers</p>
+        </div>
+
+        <div class="segment-card card reveal-up">
+          <div class="segment-photo"><img src="assets/images/stock/horeca.jpg" alt="Restaurant dining interior" loading="lazy">
+          </div>
+          <div class="segment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 13.87A4 4 0 0 1 7.41 6.13a5.5 5.5 0 0 1 9.18 0A4 4 0 0 1 18 13.87V21H6Z" />
+              <line x1="6" x2="18" y1="17" y2="17" />
+            </svg></div>
+          <h4 class="segment-name" data-en="HORECA" data-ar="الفنادق والمطاعم">HORECA</h4>
+          <p class="segment-desc" data-en="Hotels, restaurants, cafes, catering companies, and cloud kitchens"
+            data-ar="الفنادق، المطاعم، المقاهي، شركات التموين، والمطابخ السحابية">Hotels, restaurants, cafes, catering
+            companies, and cloud kitchens</p>
+        </div>
+
+        <div class="segment-card card reveal-up">
+          <div class="segment-photo"><img src="assets/images/stock/pharmacy.jpg" alt="Pharmacy medicine blister packs" loading="lazy">
+          </div>
+          <div class="segment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M11 2a2 2 0 0 0-2 2v5H4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h5v5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-5h5a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-5V4a2 2 0 0 0-2-2h-2z" />
+            </svg></div>
+          <h4 class="segment-name" data-en="Pharmacies & Health" data-ar="الصيدليات والصحة">Pharmacies & Health</h4>
+          <p class="segment-desc" data-en="Pharmacies, wellness stores, and health-focused retailers"
+            data-ar="الصيدليات، متاجر العافية، وتجار التجزئة الصحيين">Pharmacies, wellness stores, and health-focused
+            retailers</p>
+        </div>
+
+        <div class="segment-card card reveal-up">
+          <div class="segment-photo"><img src="assets/images/stock/wholesale.jpg" alt="Bulk warehouse racking aisle" loading="lazy">
+          </div>
+          <div class="segment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z" />
+              <path d="M6 22V11h12v11" />
+              <path d="M6 15h12" />
+              <path d="M6 18.5h12" />
+            </svg></div>
+          <h4 class="segment-name" data-en="Wholesale Marts" data-ar="أسواق الجملة">Wholesale Marts</h4>
+          <p class="segment-desc" data-en="Bulk distribution to regional wholesalers and trading companies"
+            data-ar="التوزيع بالجملة لتجار الجملة الإقليميين وشركات التجارة">Bulk distribution to regional wholesalers
+            and trading companies</p>
+        </div>
+
+        <div class="segment-card card reveal-up">
+          <div class="segment-photo"><img src="assets/images/stock/ecommerce.jpg" alt="Online shopping on a laptop" loading="lazy">
+          </div>
+          <div class="segment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="8" cy="21" r="1" />
+              <circle cx="19" cy="21" r="1" />
+              <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+            </svg></div>
+          <h4 class="segment-name" data-en="E-Commerce" data-ar="التجارة الإلكترونية">E-Commerce</h4>
+          <p class="segment-desc" data-en="Online marketplaces, D2C brands, and digital-first retailers"
+            data-ar="الأسواق الإلكترونية، العلامات التجارية المباشرة، وتجار التجزئة الرقميين">Online marketplaces, D2C
+            brands, and digital-first retailers</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ §9 ADVANTAGES ═══════════════ -->
+  <section class="section" id="advantages">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-en="Why RiDA" data-ar="لماذا ريدا">Why RiDA</span>
+        <h2 class="section-title" data-en="Why Partner With RiDA?" data-ar="لماذا الشراكة مع ريدا؟">Why Partner With
+          RiDA?</h2>
+      </div>
+
+      <div class="advantages-list">
+        <div class="advantage-item reveal-up">
+          <div class="advantage-number">01</div>
+          <div class="advantage-content">
+            <h3 class="advantage-title" data-en="End-to-End Supply Chain Control"
+              data-ar="التحكم الكامل في سلسلة التوريد">End-to-End Supply Chain Control</h3>
+            <p class="advantage-text" data-en="From sourcing to shelf — we manage every step so you don't have to."
+              data-ar="من التوريد إلى الرف — نتولى كل خطوة حتى لا تضطر أنت لذلك.">From sourcing to shelf — we manage
+              every step so you don't have to.</p>
+          </div>
+        </div>
+
+        <div class="advantage-item reveal-up">
+          <div class="advantage-number">02</div>
+          <div class="advantage-content">
+            <h3 class="advantage-title" data-en="UAE-Wide Cold Chain Infrastructure"
+              data-ar="بنية تحتية للتبريد عبر الإمارات">UAE-Wide Cold Chain Infrastructure</h3>
+            <p class="advantage-text" data-en="Temperature-controlled warehousing and delivery for perishable goods."
+              data-ar="تخزين وتسليم متحكم في درجة الحرارة للسلع القابلة للتلف.">Temperature-controlled warehousing and
+              delivery for perishable goods.</p>
+          </div>
+        </div>
+
+        <div class="advantage-item reveal-up">
+          <div class="advantage-number">03</div>
+          <div class="advantage-content">
+            <h3 class="advantage-title" data-en="Regulatory & Compliance Expertise" data-ar="خبرة تنظيمية وامتثال">
+              Regulatory & Compliance Expertise</h3>
+            <p class="advantage-text" data-en="Full ESMA, municipality, and import licensing handled in-house."
+              data-ar="معالجة كاملة لمعايير إسماع والبلديات وتراخيص الاستيراد داخلياً.">Full ESMA, municipality, and
+              import licensing handled in-house.</p>
+          </div>
+        </div>
+
+        <div class="advantage-item reveal-up">
+          <div class="advantage-number">04</div>
+          <div class="advantage-content">
+            <h3 class="advantage-title" data-en="Multi-Category Portfolio Strength" data-ar="قوة المحفظة متعددة الفئات">
+              Multi-Category Portfolio Strength</h3>
+            <p class="advantage-text"
+              data-en="Foods, beverages, personal care, household, baby care, and stationery under one roof."
+              data-ar="أغذية، مشروبات، عناية شخصية، منزلية، عناية بالأطفال، وقرطاسية تحت سقف واحد.">Foods, beverages,
+              personal care, household, baby care, and stationery under one roof.</p>
+          </div>
+        </div>
+
+        <div class="advantage-item reveal-up">
+          <div class="advantage-number">05</div>
+          <div class="advantage-content">
+            <h3 class="advantage-title" data-en="Data-Driven Route-to-Market" data-ar="مسار للسوق مدعوم بالبيانات">
+              Data-Driven Route-to-Market</h3>
+            <p class="advantage-text"
+              data-en="Analytics-backed distribution planning, demand forecasting, and performance tracking."
+              data-ar="تخطيط توزيع مدعوم بالتحليلات، التنبؤ بالطلب، وتتبع الأداء.">Analytics-backed distribution
+              planning, demand forecasting, and performance tracking.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ §10 VISION ═══════════════ -->
+  <section class="section section-dark" id="vision">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-en="Looking Ahead" data-ar="نظرة مستقبلية">Looking Ahead</span>
+      </div>
+
+      <div class="vision-quote reveal-up">
+        <blockquote data-en="&ldquo;Expanding beyond borders, building brands that last.&rdquo;"
+          data-ar="&ldquo;نتوسع خلف الحدود، ونبني علامات تجارية تدوم.&rdquo;">&ldquo;Expanding beyond borders,
+          building
+          brands that last.&rdquo;</blockquote>
+      </div>
+
+      <div class="vision-grid stagger-cards">
+        <div class="vision-card reveal-up">
+          <div class="vision-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <circle cx="12" cy="12" r="6" />
+              <circle cx="12" cy="12" r="2" />
+            </svg></div>
+          <h4 class="vision-title" data-en="GCC Expansion" data-ar="التوسع في الخليج">GCC Expansion</h4>
+          <p class="vision-text"
+            data-en="Expanding to Saudi Arabia, Kuwait, Bahrain, Oman, and Qatar — bringing RiDA's distribution excellence to the wider Gulf market."
+            data-ar="التوسع إلى المملكة العربية السعودية والكويت والبحرين وعمان وقطر — تقديم تميز ريدا في التوزيع إلى السوق الخليجي الأوسع.">
+            Expanding to Saudi Arabia, Kuwait, Bahrain, Oman, and Qatar — bringing RiDA's distribution excellence to
+            the
+            wider Gulf market.</p>
+        </div>
+
+        <div class="vision-card reveal-up">
+          <div class="vision-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" />
+              <circle cx="7.5" cy="7.5" r=".5" fill="currentColor" />
+            </svg></div>
+          <h4 class="vision-title" data-en="Private Label Launch" data-ar="إطلاق العلامة الخاصة">Private Label Launch
+          </h4>
+          <p class="vision-text"
+            data-en="Building our own house brands for the UAE market — quality products at competitive prices under the RiDA umbrella."
+            data-ar="بناء علاماتنا التجارية الخاصة لسوق الإمارات — منتجات عالية الجودة بأسعار تنافسية تحت مظلة ريدا.">
+            Building our own house brands for the UAE market — quality products at competitive prices under the RiDA
+            umbrella.</p>
+        </div>
+
+        <div class="vision-card reveal-up">
+          <div class="vision-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="18" height="12" x="3" y="4" rx="2" />
+              <line x1="2" x2="22" y1="20" y2="20" />
+            </svg></div>
+          <h4 class="vision-title" data-en="Digital B2B Platform" data-ar="منصة رقمية B2B">Digital B2B Platform</h4>
+          <p class="vision-text"
+            data-en="An online ordering portal for retail partners — real-time inventory, order tracking, and account management."
+            data-ar="بوابة طلبات عبر الإنترنت لشركاء التجزئة — مخزون في الوقت الحقيقي، تتبع الطلبات، وإدارة الحسابات.">
+            An online ordering portal for retail partners — real-time inventory, order tracking, and account
+            management.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ §11 CONTACT ═══════════════ -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</span>
+        <h2 class="section-title" data-en="Let's Build Together" data-ar="لنبني معاً">Let's Build Together</h2>
+        <p class="contact-subtitle" data-en="Ready to bring your products to the UAE market? Let's talk."
+          data-ar="مستعد لإحضار منتجاتك إلى سوق الإمارات؟ دعنا نتحدث.">Ready to bring your products to the UAE market?
+          Let's talk.</p>
+      </div>
+
+      <div class="contact-grid stagger-cards">
+        <div class="contact-card card reveal-up">
+          <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg></div>
+          <div class="contact-card-label" data-en="Call Us" data-ar="اتصل بنا">Call Us</div>
+          <div class="contact-card-value">+971-XX-XXX-XXXX</div>
+        </div>
+
+        <div class="contact-card card reveal-up">
+          <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg></div>
+          <div class="contact-card-label" data-en="Email Us" data-ar="راسلنا">Email Us</div>
+          <div class="contact-card-value">info@rida.ae</div>
+        </div>
+
+        <div class="contact-card card reveal-up">
+          <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></div>
+          <div class="contact-card-label" data-en="Visit Us" data-ar="زورنا">Visit Us</div>
+          <div class="contact-card-value" data-en="Dubai, UAE" data-ar="دبي، الإمارات">Dubai, UAE</div>
+        </div>
+
+        <div class="contact-card card reveal-up">
+          <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+            </svg></div>
+          <div class="contact-card-label" data-en="WhatsApp" data-ar="واتساب">WhatsApp</div>
+          <div class="contact-card-value" data-en="Chat Now" data-ar="تحدث الآن">Chat Now</div>
+        </div>
+      </div>
+
+      <div class="cta-banner reveal-up">
+        <img class="cta-banner-photo" src="assets/images/stock/truck.jpg" alt="Cargo truck on a desert highway" loading="lazy">
+        <div class="cta-banner-content">
+          <h3 class="cta-banner-title" data-en="From Global Brands to Local Shelves"
+            data-ar="من العلامات العالمية إلى الرفوف المحلية">From Global Brands to Local Shelves</h3>
+          <p class="cta-banner-sub" data-en="Same-day dispatch. Full cold chain. All 7 emirates."
+            data-ar="إرسال في نفس اليوم. سلسلة تبريد كاملة. جميع الإمارات السبع.">Same-day dispatch. Full cold chain.
+            All 7 emirates.</p>
+          <a href="#" class="btn btn-accent btn-lg" data-en="Partner With Us Today" data-ar="كن شريكنا اليوم">Partner
+            With Us Today</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="footer-watermark" aria-hidden="true">RiDA</div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img id="footerLogo" src="assets/logos/logo_english.png" data-logo-en="assets/logos/logo_english.png" data-logo-ar="assets/logos/logo_2_arabic.png" alt="RiDA Logo" class="footer-logo" width="228" height="106">
+          <p class="footer-tagline"
+            data-en="Reliable Innovative Distribution Alliance — UAE's trusted FMCG distribution partner."
+            data-ar="ريدا — شريك التوزيع الموثوق في الإمارات للسلع الاستهلاكية سريعة الحركة.">Reliable Innovative
+            Distribution Alliance — UAE's trusted FMCG distribution partner.</p>
+          <div class="footer-social">
+            <a href="#" class="social-icon" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Twitter/X">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+          <div class="footer-links">
+            <a href="#about" data-en="About Us" data-ar="من نحن">About Us</a>
+            <a href="#framework" data-en="Services" data-ar="خدماتنا">Services</a>
+            <a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" data-en="Legal" data-ar="قانوني">Legal</h4>
+          <div class="footer-links">
+            <a href="#" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>
+            <a href="#" data-en="Terms of Service" data-ar="شروط الخدمة">Terms of Service</a>
+            <a href="#" data-en="Cookie Policy" data-ar="سياسة ملفات تعريف الارتباط">Cookie Policy</a>
+            <a href="#" data-en="Sitemap" data-ar="خريطة الموقع">Sitemap</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" data-en="Contact Info" data-ar="معلومات الاتصال">Contact Info</h4>
+          <div class="footer-links">
+            <a href="tel:+971XXXXXXXX">+971-XX-XXX-XXXX</a>
+            <a href="mailto:info@rida.ae">info@rida.ae</a>
+            <a href="#" data-en="Dubai, UAE" data-ar="دبي، الإمارات">Dubai, UAE</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 RiDA —
+          <span data-en="Reliable Innovative Distribution Alliance. All rights reserved." data-ar="ريدا — تحالف التوزيع المبتكر الموثوق. جميع الحقوق محفوظة.">Reliable Innovative Distribution Alliance. All rights reserved.</span>
+        </p>
+        <a href="#hero" class="back-to-top" aria-label="Back to top">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+          </svg>
+          <span data-en="Back to top" data-ar="العودة للأعلى">Back to top</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- Main Script -->
+  <script src="js/main.js" defer></script>
+  <script src="js/cinematic.js" defer></script>
+  <script src="js/globe.js" defer></script>
+</body>
+
+</html>
