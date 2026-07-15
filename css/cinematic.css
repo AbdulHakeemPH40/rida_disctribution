@@ -2017,3 +2017,21 @@ html, body { overflow-x: hidden; overflow-x: clip; }
   .hero-title { font-size: clamp(2.8rem, 6.5vw, 5rem); }
   .hero-ctas { margin-top: 28px; }
 }
+
+/* ─── SEGMENT ICON CHIP: always fully visible (not only on hover) ───
+   The chip overlaps the photo via negative margin but was unpositioned,
+   while .segment-photo is position:relative — positioned elements paint
+   above static ones, so the photo covered the chip's top half at rest.
+   On hover the chip's scale() transform created a stacking context and
+   lifted it above the photo, which is why it only looked right while
+   hovered. Positioning it with a z-index makes the hover look permanent. */
+.segment-card .segment-icon {
+  position: relative;
+  z-index: 2;
+  width: 56px;
+  height: 56px;
+  margin: -28px auto var(--space-xs); /* straddles the photo edge, centered */
+  border-radius: 16px;
+  box-shadow: 0 0 0 4px var(--bg-card), 0 6px 18px rgba(16, 30, 22, .18);
+}
+.segment-card .segment-icon svg { width: 24px; height: 24px; }
