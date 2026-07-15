@@ -456,9 +456,7 @@ p {
   padding: var(--space-xs) 0;
 }
 
-[data-theme="dark"] .navbar.scrolled {
-  background: rgba(10, 31, 31, 0.95);
-}
+/* navbar always light — dark override handled in cinematic.css */
 
 .navbar-inner {
   display: flex;

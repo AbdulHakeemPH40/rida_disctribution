@@ -1438,11 +1438,7 @@ h2 { font-weight: 700; letter-spacing: -0.03em; }
   border: 1px solid rgba(16,30,22,.07);
   box-shadow: 0 2px 12px rgba(16,30,22,.05);
 }
-[data-theme="dark"] .navbar-inner {
-  background: rgba(14,26,20,.78);
-  border-color: rgba(120,200,150,.12);
-  box-shadow: 0 2px 16px rgba(0,0,0,.35);
-}
+/* (dark-mode navbar overridden below — always stays light) */
 
 /* Icon chips: flat brand tint, no gold blend, no inner glow */
 .pillar-icon, .portfolio-icon, .segment-icon, .region-emoji,
@@ -1872,20 +1868,20 @@ html, body { overflow-x: hidden; overflow-x: clip; }
 }
 [data-theme="dark"] .lang-toggle,
 [data-theme="dark"] .navbar.scrolled .lang-toggle {
-  color: var(--text-secondary) !important;
+  color: #4C5F55 !important;
 }
 [data-theme="dark"] .theme-toggle,
 [data-theme="dark"] .navbar.scrolled .theme-toggle {
-  color: var(--text-primary) !important;
+  color: #0E1F17 !important;
 }
 [data-theme="dark"] .navbar.scrolled .hamburger span,
 [data-theme="dark"] .hamburger span {
-  background: var(--text-primary) !important;
+  background: #0E1F17 !important;
 }
 [data-theme="dark"] .mobile-drawer {
   background: #ffffff !important;
 }
 [data-theme="dark"] .mobile-drawer a {
-  color: var(--text-primary) !important;
+  color: #0E1F17 !important;
   border-bottom-color: rgba(0, 0, 0, 0.06) !important;
 }
