@@ -118,11 +118,11 @@ body::after {
   content: '';
   position: fixed; inset: 0;
   pointer-events: none; z-index: 9999;
-  opacity: .035;
+  opacity: .012;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   mix-blend-mode: overlay;
 }
-[data-theme="dark"] body::after { opacity: .05; }
+[data-theme="dark"] body::after { opacity: .022; }
 
 h1, h2, h3, h4 { letter-spacing: -0.03em; }
 h1 { font-weight: 800; font-size: clamp(2.8rem, 6vw, 5.4rem); line-height: 1.02; }
@@ -233,12 +233,19 @@ h2 { font-weight: 700; font-size: clamp(2rem, 4vw, 3.4rem); }
   transition: transform .6s var(--ease-out-expo);
   z-index: 0;
 }
-[data-theme="dark"] .hero::before { opacity: .7; }
+[data-theme="dark"] .hero::before { opacity: .55; filter: blur(35px); }
 .hero::after {
   content: '';
   position: absolute; inset: 0;
-  background: radial-gradient(120% 90% at 50% 0%, transparent 55%, var(--bg-primary) 100%);
+  background:
+    radial-gradient(120% 90% at 50% 0%, transparent 40%, var(--bg-primary) 100%),
+    linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(0,0,0,.35) 50%, rgba(0,0,0,.55) 100%);
   z-index: 1;
+}
+[data-theme="dark"] .hero::after {
+  background:
+    radial-gradient(120% 90% at 50% 0%, transparent 30%, var(--bg-primary) 100%),
+    linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.65) 50%, rgba(0,0,0,.85) 100%);
 }
 @keyframes aurora-drift {
   0%   { transform: translate3d(0,0,0) scale(1); }
@@ -278,19 +285,29 @@ h2 { font-weight: 700; font-size: clamp(2rem, 4vw, 3.4rem); }
   background: linear-gradient(180deg, var(--text-primary), var(--green-700));
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 12px rgba(0,0,0,.18);
 }
 [data-theme="dark"] .hero-title .word {
-  background: linear-gradient(180deg, #EAF3EC, #8FBF9F);
+  background: linear-gradient(180deg, #FFFFFF, #C8E6D0);
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 20px rgba(0,0,0,.4), 0 0 60px rgba(52,199,123,.15);
 }
 .hero-title .highlight {
   background: linear-gradient(120deg, var(--gold-deep), var(--gold-bright) 55%, var(--gold-primary));
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
   position: relative;
+  text-shadow: 0 2px 14px rgba(0,0,0,.22);
+}
+[data-theme="dark"] .hero-title .highlight {
+  background: linear-gradient(120deg, #FFD84D, #FFE97A 45%, #FFC107);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 20px rgba(0,0,0,.5), 0 0 50px rgba(245,197,66,.3);
 }
 
-.hero-subtitle { color: var(--text-secondary); font-size: 1.3rem; font-weight: 400; letter-spacing: .02em; }
-.hero-tagline  { color: var(--text-primary); font-size: 1.5rem; font-weight: 600; margin-top: 6px; }
+.hero-subtitle { color: var(--text-secondary); font-size: 1.3rem; font-weight: 400; letter-spacing: .02em; text-shadow: 0 1px 8px rgba(0,0,0,.2); }
+.hero-tagline  { color: var(--text-primary); font-size: 1.5rem; font-weight: 600; margin-top: 6px; text-shadow: 0 2px 10px rgba(0,0,0,.25); }
+[data-theme="dark"] .hero-subtitle { color: #B8D4C4; text-shadow: 0 1px 12px rgba(0,0,0,.5); }
+[data-theme="dark"] .hero-tagline  { color: #FFFFFF; text-shadow: 0 2px 16px rgba(0,0,0,.5); }
 
 .hero-ctas { margin-top: 40px; gap: 16px; }
 
@@ -1473,6 +1490,12 @@ h2 { font-weight: 700; letter-spacing: -0.03em; }
 .hero-ctas .btn-accent:focus-visible {
   box-shadow: 0 8px 22px rgba(212, 160, 23, .28);
 }
+[data-theme="dark"] .hero-ctas .btn-primary {
+  box-shadow: 0 6px 24px rgba(52,199,123,.35);
+}
+[data-theme="dark"] .hero-ctas .btn-accent {
+  box-shadow: 0 6px 24px rgba(255,216,77,.30);
+}
 
 /* Hero background photo (aerial logistics hub) — sits under the glow layers.
    Removed automatically by onerror if hero.jpg is absent. */
@@ -1485,10 +1508,11 @@ h2 { font-weight: 700; letter-spacing: -0.03em; }
   object-fit: cover;
   object-position: center bottom; /* facility at the bottom, calm sky behind the headline */
   z-index: 0;
-  opacity: .5;
+  opacity: .7;
   pointer-events: none;
+  filter: brightness(1.05) saturate(1.1);
 }
-[data-theme="dark"] .hero-photo { opacity: .3; }
+[data-theme="dark"] .hero-photo { opacity: .45; filter: brightness(.7) saturate(.8); }
 /* keep the existing glow + fade layers and content above the photo */
 .hero::before { z-index: 1; }
 .hero::after  { z-index: 1; }
@@ -1658,6 +1682,11 @@ h2 { font-weight: 700; letter-spacing: -0.03em; }
   margin: 30px 0 14px;
 }
 .hero-label { font-size: .9rem; padding: 10px 22px; }
+[data-theme="dark"] .hero-label {
+  background: rgba(16,29,22,.75);
+  border-color: rgba(52,199,123,.2);
+  color: #C8E6D0;
+}
 .hero-subtitle { font-size: clamp(1.1rem, 2vw, 1.45rem); }
 .hero-tagline { font-size: clamp(1.25rem, 2.4vw, 1.8rem); margin-top: 10px; }
 .hero-ctas { margin-top: 44px; }
