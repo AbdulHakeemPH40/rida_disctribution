@@ -1358,9 +1358,9 @@ h2 { font-weight: 700; font-size: clamp(2rem, 4vw, 3.4rem); }
   --shadow-lg: 0 16px 40px rgba(16,30,22,.10);
 }
 
-/* Flat editorial canvas — no aurora wash, no film grain */
+/* Cinematic canvas — film grain + aurora stay active */
 body, [data-theme="dark"] body { background: var(--bg-primary); }
-body::after { display: none; }
+/* body::after grain is defined earlier — keep it active for cinematic depth */
 
 /* Typography: large, calm, corporate */
 h1 { font-weight: 700; letter-spacing: -0.035em; }
