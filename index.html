@@ -111,7 +111,6 @@
 
   <!-- ═══════════════ §1 HERO ═══════════════ -->
   <section class="hero" id="hero">
-    <img class="hero-photo" src="assets/images/stock/hero.png" alt="" aria-hidden="true" onerror="this.remove()">
     <div class="hero-content">
       <h1 class="hero-title">
         <span class="word" data-en="FROM" data-ar="من">FROM</span>
@@ -133,11 +132,9 @@
       </div>
     </div>
 
-    <div class="scroll-indicator">
-      <span data-en="Scroll" data-ar="مرر">Scroll</span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M12 5v14M19 12l-7 7-7-7" />
-      </svg>
+    <div class="hero-media" aria-hidden="true">
+      <img src="assets/images/stock/hero.png" alt="RiDA distribution hub with branded truck at the loading docks"
+        onerror="this.closest('.hero-media').remove()">
     </div>
   </section>
 
