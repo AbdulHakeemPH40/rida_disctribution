@@ -1927,3 +1927,93 @@ html, body { overflow-x: hidden; overflow-x: clip; }
 }
 
 
+
+/* ═══════════ HERO V4 — THEME-INVARIANT FULL-BLEED (final) ═══════════
+   Why light mode always looked worse than dark, no matter the scrim:
+
+   1. `.hero-photo { opacity: <1 }` BLENDS the photo with the section
+      background behind it — near-black in dark mode (rich), near-WHITE
+      in light mode (milky gray). Same CSS, different result per theme.
+   2. The scrim's last stop faded to var(--bg-primary) — a white fog
+      band at the hero's bottom edge in light mode.
+
+   Fix: no theme variables and no partial opacity anywhere in the hero.
+   Photo at opacity 1, darkened by filter; fixed deep-green scrim with a
+   radial spotlight that buries the photo's baked-in RIDA wordmark
+   behind the headline; fixed text colors. The hero now renders
+   pixel-identical in both themes — the dark look the owner approved. */
+
+.hero-photo,
+[data-theme="dark"] .hero-photo {
+  opacity: 1;
+  filter: brightness(.5) saturate(1.05) contrast(1.02);
+}
+
+.hero::after,
+[data-theme="dark"] .hero::after {
+  display: block;
+  background:
+    radial-gradient(78% 58% at 50% 40%, rgba(4, 18, 11, .7), rgba(4, 18, 11, .3) 72%, transparent 100%),
+    linear-gradient(180deg,
+      rgba(4, 18, 11, .55) 0%,
+      rgba(4, 18, 11, .38) 45%,
+      rgba(4, 18, 11, .62) 82%,
+      rgba(4, 18, 11, .78) 100%);
+}
+
+/* Quiet the aurora equally in both themes so it can't tint unevenly */
+.hero::before,
+[data-theme="dark"] .hero::before {
+  opacity: .25;
+  animation: none;
+}
+
+/* Headline: solid white — a white→green gradient reads silvery/washed
+   over a busy photo. Gold stays gradient (it's the accent). */
+.hero-title .word,
+[data-theme="dark"] .hero-title .word {
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  color: #FFFFFF;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, .55), 0 1px 3px rgba(0, 0, 0, .4);
+}
+.hero-title .highlight,
+[data-theme="dark"] .hero-title .highlight {
+  background: linear-gradient(120deg, #F5C542, #FFE07A 50%, #E3A81C);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #F5C542; /* fallback + shadow source */
+  text-shadow: 0 2px 18px rgba(0, 0, 0, .5);
+}
+.hero-subtitle,
+[data-theme="dark"] .hero-subtitle {
+  color: #D9E7DD;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, .55);
+}
+.hero-tagline,
+[data-theme="dark"] .hero-tagline {
+  color: #FFFFFF;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .55);
+}
+.scroll-indicator,
+[data-theme="dark"] .scroll-indicator {
+  color: rgba(255, 255, 255, .75);
+}
+
+/* Everything fits inside the hero: full viewport, centered, clipped */
+.hero,
+[data-theme="dark"] .hero {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 110px 20px 90px; /* navbar clearance / scroll-indicator room */
+  overflow: hidden;
+}
+/* Short viewports (laptops, landscape phones): shrink type before it
+   can push the CTAs out of the section */
+@media (max-height: 760px) {
+  .hero-title { font-size: clamp(2.8rem, 6.5vw, 5rem); }
+  .hero-ctas { margin-top: 28px; }
+}
