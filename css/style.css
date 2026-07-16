@@ -846,6 +846,19 @@ p {
 }
 
 /* ─── 10. ABOUT SECTION ─── */
+/* About CTA card (placeholder on homepage) */
+.about-cta-card {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-md) var(--space-sm);
+}
+
+.about-cta-card .about-description {
+  max-width: 600px;
+  margin: 0 auto var(--space-md);
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1570,6 +1583,162 @@ p {
   max-width: 600px;
 }
 
+/* ─── 16.5 VISION & MISSION TWO-COLUMN ─── */
+.vm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl, 2rem);
+  align-items: stretch;
+}
+
+.vm-col {
+  padding: var(--space-xl, 2.5rem);
+  border-radius: var(--radius-xl, 16px);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md, 1.25rem);
+}
+
+.vm-vision {
+  background: linear-gradient(145deg, rgba(245,197,66,0.08) 0%, rgba(245,197,66,0.02) 100%);
+  border: 1px solid rgba(245,197,66,0.18);
+}
+
+.vm-mission {
+  background: linear-gradient(145deg, rgba(31,122,77,0.10) 0%, rgba(31,122,77,0.02) 100%);
+  border: 1px solid rgba(31,122,77,0.22);
+}
+
+[data-theme="dark"] .vm-vision {
+  background: linear-gradient(145deg, rgba(245,197,66,0.10) 0%, rgba(245,197,66,0.03) 100%);
+  border: 1px solid rgba(245,197,66,0.16);
+}
+
+[data-theme="dark"] .vm-mission {
+  background: linear-gradient(145deg, rgba(52,199,123,0.10) 0%, rgba(52,199,123,0.03) 100%);
+  border: 1px solid rgba(52,199,123,0.18);
+}
+
+.vm-badge {
+  display: inline-block;
+  font-family: var(--font-heading, 'Outfit');
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.35em 1em;
+  border-radius: 999px;
+}
+
+.vm-vision .vm-badge {
+  color: #B8860B;
+  background: rgba(245,197,66,0.15);
+}
+
+.vm-mission .vm-badge {
+  color: #1F7A4D;
+  background: rgba(31,122,77,0.12);
+}
+
+[data-theme="dark"] .vm-vision .vm-badge {
+  color: #FFD84D;
+  background: rgba(255,216,77,0.15);
+}
+
+[data-theme="dark"] .vm-mission .vm-badge {
+  color: #34C77B;
+  background: rgba(52,199,123,0.15);
+}
+
+.vm-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vm-vision .vm-svg {
+  color: var(--gold-primary, #F5C542);
+  width: 42px;
+  height: 42px;
+}
+
+.vm-mission .vm-svg {
+  color: var(--green-primary, #1F7A4D);
+  width: 42px;
+  height: 42px;
+}
+
+.vm-headline {
+  font-family: var(--font-heading, 'Outfit');
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--text-primary, #0E1F17);
+  max-width: 520px;
+}
+
+[data-theme="dark"] .vm-headline {
+  color: #EAF3EC;
+}
+
+.vm-divider {
+  width: 60px;
+  height: 3px;
+  border-radius: 3px;
+}
+
+.vm-vision .vm-divider {
+  background: var(--gold-primary, #F5C542);
+}
+
+.vm-mission .vm-divider {
+  background: var(--green-primary, #1F7A4D);
+}
+
+.vm-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.vm-points li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--text-secondary, #4A6655);
+}
+
+[data-theme="dark"] .vm-points li {
+  color: #B0C8B8;
+}
+
+.vm-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.vm-vision .vm-points li::before {
+  background: var(--gold-primary, #F5C542);
+}
+
+.vm-mission .vm-points li::before {
+  background: var(--green-primary, #1F7A4D);
+}
+
 /* ─── 17. VISION SECTION ─── */
 .vision-quote {
   text-align: center;
@@ -2029,6 +2198,15 @@ p {
 
   .vision-grid {
     grid-template-columns: 1fr;
+  }
+
+  .vm-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md, 1.5rem);
+  }
+
+  .vm-col {
+    padding: var(--space-lg, 1.75rem);
   }
 
   .contact-grid {
