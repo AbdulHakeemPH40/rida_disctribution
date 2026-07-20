@@ -772,7 +772,7 @@ p {
 
 /* ─── 9. TRUST BAR ─── */
 .trust-bar {
-  padding: var(--space-lg) 0;
+  padding: 16px 0 10px;
   background: var(--bg-gray-light);
   overflow: hidden;
   transition: background-color 0.4s ease;
@@ -834,8 +834,9 @@ p {
 }
 
 .trust-tagline {
-  margin-top: var(--space-md);
-  font-size: 0.95rem;
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 0.85rem;
   color: var(--text-secondary);
   font-style: italic;
 }
@@ -849,14 +850,14 @@ p {
 /* About CTA card (placeholder on homepage) */
 .about-cta-card {
   text-align: center;
-  max-width: 720px;
+  max-width: 680px;
   margin: 0 auto;
-  padding: var(--space-md) var(--space-sm);
+  padding: clamp(24px, 3vw, 36px) clamp(16px, 2.5vw, 28px);
 }
 
 .about-cta-card .about-description {
-  max-width: 600px;
-  margin: 0 auto var(--space-md);
+  max-width: 52ch;
+  margin: 0 auto 20px;
 }
 
 .about-grid {
@@ -876,8 +877,9 @@ p {
 }
 
 .about-headline {
-  margin-bottom: var(--space-md);
+  margin-bottom: 14px;
   color: var(--green-primary);
+  line-height: 1.15;
 }
 
 [data-theme="dark"] .about-headline {
@@ -885,10 +887,10 @@ p {
 }
 
 .about-description {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--text-secondary);
-  margin-bottom: var(--space-lg);
-  line-height: 1.8;
+  margin-bottom: 22px;
+  line-height: 1.65;
 }
 
 .about-image {
@@ -1113,74 +1115,76 @@ p {
   max-width: 700px;
 }
 
-/* ─── 12. PORTFOLIO SECTION ─── */
+/* --- 12. PORTFOLIO SECTION --- */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-md);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
 }
 
 .portfolio-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: var(--space-lg) var(--space-md);
+  padding: 22px 16px 20px;
   background: var(--white);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  transition: all var(--transition-base);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
   position: relative;
   overflow: hidden;
 }
 
 [data-theme="dark"] .portfolio-card {
   background: var(--bg-card);
-  border-color: rgba(255, 255, 255, 0.05);
-}
-
-.portfolio-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 0;
-  background: var(--gold-primary);
-  transition: height var(--transition-base);
-  border-radius: 0 2px 2px 0;
-}
-
-.portfolio-card:hover::before {
-  height: 100%;
+  border-color: rgba(255, 255, 255, 0.06);
 }
 
 .portfolio-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   box-shadow: var(--shadow-md);
+  border-color: rgba(245, 197, 66, 0.4);
 }
 
 .portfolio-icon {
-  font-size: 3rem;
-  margin-bottom: var(--space-sm);
-  display: inline-block;
-  transition: transform var(--transition-base);
+  width: 52px;
+  height: 52px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, rgba(46, 139, 87, 0.12), rgba(255, 215, 0, 0.1));
+  color: var(--green-primary);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.portfolio-icon svg {
+  width: 24px;
+  height: 24px;
+  display: block;
 }
 
 .portfolio-card:hover .portfolio-icon {
-  transform: scale(1.15) rotate(5deg);
+  transform: scale(1.06);
 }
 
 .portfolio-title {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1.1rem;
-  margin-bottom: var(--space-xs);
+  font-size: 0.98rem;
+  line-height: 1.3;
+  margin: 0 0 6px;
   color: var(--text-primary);
 }
 
 .portfolio-desc {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.45;
+  margin: 0;
 }
 
 /* ─── 13. GLOBAL SOURCING SECTION ─── */
@@ -2063,12 +2067,6 @@ p {
   border-right: 4px solid var(--gold-primary);
 }
 
-[dir="rtl"] .portfolio-card::before {
-  left: auto;
-  right: 0;
-  border-radius: 2px 0 0 2px;
-}
-
 [dir="rtl"] .footer-heading::after {
   left: auto;
   right: 0;
@@ -2173,7 +2171,8 @@ p {
   }
 
   .portfolio-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
   }
 
   .sourcing-regions {

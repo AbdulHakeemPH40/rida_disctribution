@@ -5,7 +5,7 @@
  *   • Embedded simplified continent SVG paths (NO external dependency needed)
  *   • Optional d3 enhancement if CDN loads successfully
  *   • UAE hub marker (gold, pulsing)
- *   • 5 sourcing countries highlighted
+ *   • Sourcing markets highlighted
  *   • Animated dashed gold routes (UAE ↔ each country)
  *   • Traveling particles along each route
  *   • Hover sync with .country-card list
@@ -22,10 +22,17 @@
   var HUB = { name: 'UAE', lat: 24.0, lon: 54.0 };
   var SPOKES = [
     { name: 'India',       lat: 22.0,  lon: 78.5  },
+    { name: 'Sri Lanka',   lat: 7.9,   lon: 80.8  },
     { name: 'Thailand',    lat: 15.5,  lon: 101.0 },
     { name: 'Vietnam',     lat: 16.0,  lon: 107.5 },
     { name: 'Philippines', lat: 13.0,  lon: 122.0 },
-    { name: 'Africa',      lat: -2.0,  lon: 25.0  }
+    { name: 'China',       lat: 35.0,  lon: 105.0 },
+    { name: 'Korea',       lat: 36.5,  lon: 127.8 },
+    { name: 'Nigeria',     lat: 9.0,   lon: 8.0   },
+    { name: 'Congo',       lat: -2.0,  lon: 23.0  },
+    { name: 'Uganda',      lat: 1.0,   lon: 32.0  },
+    { name: 'Kenya',       lat: 0.5,   lon: 38.0  },
+    { name: 'Zambia',      lat: -13.0, lon: 28.0  }
   ];
 
   var GOLD  = '#F5C542';

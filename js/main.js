@@ -210,8 +210,8 @@ function initFrameworkTimeline() {
       number: '01',
       titleEn: 'Global Sourcing',
       titleAr: 'التوريد العالمي',
-      textEn: 'We source premium FMCG products from our five key markets — the Philippines, India, Thailand, Vietnam, and Africa. Every product is vetted for quality, compliance, and market demand.',
-      textAr: 'نورد منتجات استهلاكية متميزة من أسواقنا الخمسة الرئيسية — الفلبين والهند وتايلاند وفيتنام وأفريقيا. كل منتج يتم فحصه للجودة والامتثال ومتطلبات السوق.'
+      textEn: 'We source FMCG products from trusted markets across Asia and Africa — including China, Korea, the Philippines, India, Sri Lanka, Thailand, Vietnam, Nigeria, and East Africa. Every product is vetted for quality, compliance, and market demand.',
+      textAr: 'نورد منتجات استهلاكية متميزة من أسواق موثوقة في آسيا وأفريقيا — بما في ذلك الصين وكوريا والفلبين والهند وتايلاند وفيتنام ونيجيريا وشرق أفريقيا. كل منتج يتم فحصه للجودة والامتثال ومتطلبات السوق.'
     },
     {
       number: '02',
@@ -231,8 +231,8 @@ function initFrameworkTimeline() {
       number: '04',
       titleEn: 'Distribution & Delivery',
       titleAr: 'التوزيع والتسليم',
-      textEn: 'A dedicated fleet covering all 7 Emirates with cold chain capability, same-day dispatch, and route-optimized delivery to retailers, HORECA, and wholesale points.',
-      textAr: 'أسطول مخصص يغطي جميع الإمارات السبع مع قدرة سلسلة التبريد، إرسال في نفس اليوم، وتسليم محسّن المسار لتجار التجزئة والفنادق والجملة.'
+      textEn: 'A dedicated fleet covering the UAE with cold chain capability, same-day dispatch, and route-optimized delivery to retailers, HORECA, and wholesale points.',
+      textAr: 'أسطول مخصص يغطي الإمارات مع قدرة سلسلة التبريد، إرسال في نفس اليوم، وتسليم محسّن المسار لتجار التجزئة والفنادق والجملة.'
     },
     {
       number: '05',
