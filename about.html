@@ -74,11 +74,23 @@
   </nav>
 
   <!-- Mobile Drawer -->
-  <div class="mobile-drawer" id="mobileDrawer">
-    <a href="about.html" data-en="About" data-ar="من نحن">About</a>
-    <a href="index.html#framework" data-en="Services" data-ar="خدماتنا">Services</a>
-    <a href="index.html#coverage" data-en="Coverage" data-ar="التغطية">Coverage</a>
-    <a href="index.html#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer-head">
+      <img src="assets/logos/logo_english.png" data-logo-en="assets/logos/logo_english.png" data-logo-ar="assets/logos/logo_2_arabic.png" alt="RiDA" class="mobile-drawer-logo">
+      <button type="button" class="mobile-drawer-close" id="drawerClose" aria-label="Close menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-drawer-nav" aria-label="Mobile">
+      <a href="about.html" data-en="About" data-ar="من نحن">About</a>
+      <a href="index.html#framework" data-en="Services" data-ar="خدماتنا">Services</a>
+      <a href="index.html#coverage" data-en="Coverage" data-ar="التغطية">Coverage</a>
+      <a href="index.html#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+    </nav>
+    <div class="mobile-drawer-foot">
+      <a href="index.html#contact" class="mobile-drawer-cta" data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</a>
+      <p class="mobile-drawer-tag" data-en="FMCG Distribution · UAE" data-ar="توزيع السلع · الإمارات">FMCG Distribution · UAE</p>
+    </div>
   </div>
   <div class="overlay" id="overlay"></div>
 
@@ -87,7 +99,7 @@
     <div class="container">
       <div class="section-header">
         <span class="section-label" data-en="About RiDA" data-ar="عن ريدا">About RiDA</span>
-        <h2 class="section-title" data-en="Reliable. Innovative. Distribution Alliance." data-ar="موثوقة. مبتكرة. تحالف توزيع.">Reliable. Innovative. Distribution Alliance.</h2>
+        <h2 class="section-title" data-en="Reliable Innovative Distribution Alliance" data-ar="موثوقة مبتكرة تحالف توزيع">Reliable Innovative Distribution Alliance</h2>
         <p style="max-width: 650px; margin: 0 auto; color: var(--muted-green, #6B9E7B); font-size: 1.05rem;"
           data-en="Learn about who we are, what we stand for, and where we're heading — the pillars that define RiDA."
           data-ar="تعرف على من نحن، وما نمثله، وإلى أين نتجه — الركائز التي تحدد ريدا.">
@@ -102,7 +114,7 @@
       <div class="about-grid">
         <div class="about-text">
           <span class="section-label" data-en="Who We Are" data-ar="من نحن">Who We Are</span>
-          <h2 class="about-headline" data-en="Reliable. Innovative. Distribution Alliance." data-ar="موثوقة. مبتكرة. تحالف توزيع.">Reliable. Innovative. Distribution Alliance.</h2>
+          <h2 class="about-headline" data-en="Reliable Innovative Distribution Alliance" data-ar="موثوقة مبتكرة تحالف توزيع">Reliable Innovative Distribution Alliance</h2>
           <p class="about-description reveal-up" data-en="RiDA is a UAE-based FMCG import and distribution company delivering global brands to local shelves across the UAE. We handle everything from sourcing and compliance to warehousing, distribution, and retail activation." data-ar="ريدا هي شركة استيراد وتوزيع سلع استهلاكية سريعة الحركة مقرها الإمارات، توصل العلامات التجارية العالمية إلى الرفوف المحلية عبر الإمارات. نتولى كل شيء من التوريد والامتثال إلى التخزين والتوزيع وتفعيل المبيعات.">
             RiDA is a UAE-based FMCG import and distribution company delivering global brands to local shelves across
             the UAE. We handle everything from sourcing and compliance to warehousing, distribution, and

@@ -346,10 +346,10 @@ h2 { font-weight: 700; font-size: clamp(2rem, 4vw, 3.4rem); }
 .navbar.scrolled .hamburger span, .hamburger span { background: var(--text-primary); }
 
 .mobile-drawer {
-  background: var(--glass-bg);
-  -webkit-backdrop-filter: blur(24px) saturate(1.6);
-  backdrop-filter: blur(24px) saturate(1.6);
-  border-left: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.94);
+  -webkit-backdrop-filter: blur(28px) saturate(1.5);
+  backdrop-filter: blur(28px) saturate(1.5);
+  border-left: 1px solid rgba(10, 32, 20, 0.08);
 }
 
 /* ─── 5. HERO — cinematic aurora ─── */
@@ -2048,11 +2048,18 @@ html, body { overflow-x: hidden; overflow-x: clip; }
   background: #0E1F17 !important;
 }
 [data-theme="dark"] .mobile-drawer {
-  background: #ffffff !important;
+  background: rgba(15, 36, 26, 0.96) !important;
+  border-left-color: rgba(255, 255, 255, 0.08) !important;
 }
-[data-theme="dark"] .mobile-drawer a {
-  color: #0E1F17 !important;
-  border-bottom-color: rgba(0, 0, 0, 0.06) !important;
+[data-theme="dark"] .mobile-drawer-nav a {
+  color: #f3f7f4 !important;
+  border-bottom-color: transparent !important;
+}
+[data-theme="dark"] .mobile-drawer-close {
+  color: #f3f7f4 !important;
+}
+[data-theme="dark"] .mobile-drawer-tag {
+  color: rgba(243, 247, 244, 0.45) !important;
 }
 
 

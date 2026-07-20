@@ -127,7 +127,7 @@ function initLanguageToggle() {
     }
 
     // Switch both navbar and footer brand artwork with the page language.
-    document.querySelectorAll('.navbar-logo, .footer-logo').forEach(logo => {
+    document.querySelectorAll('.navbar-logo, .footer-logo, .mobile-drawer-logo').forEach(logo => {
       const englishLogo = logo.getAttribute('data-logo-en') || 'assets/logos/logo_english.png';
       const arabicLogo = logo.getAttribute('data-logo-ar') || 'assets/logos/logo_2_arabic.png';
       logo.setAttribute('src', arabic ? arabicLogo : englishLogo);
@@ -151,36 +151,60 @@ function initMobileMenu() {
   const hamburger = document.getElementById('hamburger');
   const drawer = document.getElementById('mobileDrawer');
   const overlay = document.getElementById('overlay');
+  const drawerClose = document.getElementById('drawerClose');
+  if (!hamburger || !drawer || !overlay) return;
+
   const drawerLinks = drawer.querySelectorAll('a');
 
   function openMenu() {
     hamburger.classList.add('active');
     drawer.classList.add('open');
+    drawer.setAttribute('aria-hidden', 'false');
     overlay.classList.add('active');
     overlay.style.display = 'block';
     document.body.style.overflow = 'hidden';
+    hamburger.setAttribute('aria-expanded', 'true');
   }
 
   function closeMenu() {
     hamburger.classList.remove('active');
     drawer.classList.remove('open');
+    drawer.setAttribute('aria-hidden', 'true');
     overlay.classList.remove('active');
     document.body.style.overflow = '';
-    setTimeout(() => { overlay.style.display = 'none'; }, 300);
+    hamburger.setAttribute('aria-expanded', 'false');
+    setTimeout(() => {
+      if (!drawer.classList.contains('open')) overlay.style.display = 'none';
+    }, 350);
   }
 
+  hamburger.setAttribute('role', 'button');
+  hamburger.setAttribute('aria-label', 'Open menu');
+  hamburger.setAttribute('aria-expanded', 'false');
+  hamburger.setAttribute('aria-controls', 'mobileDrawer');
+  hamburger.tabIndex = 0;
+
   hamburger.addEventListener('click', () => {
-    if (drawer.classList.contains('open')) {
-      closeMenu();
-    } else {
-      openMenu();
+    if (drawer.classList.contains('open')) closeMenu();
+    else openMenu();
+  });
+
+  hamburger.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      hamburger.click();
     }
   });
 
+  if (drawerClose) drawerClose.addEventListener('click', closeMenu);
   overlay.addEventListener('click', closeMenu);
 
   drawerLinks.forEach(link => {
     link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) closeMenu();
   });
 }
 
