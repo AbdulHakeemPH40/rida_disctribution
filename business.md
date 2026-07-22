@@ -306,7 +306,7 @@ We welcome collaborations with:
 - **P6 sourcing:** 5 sourcing-criteria chips added under the sourcing map. ✅
 - **P8 segments (was note #4):** "Institutional & Government" card added — website now covers all profile segments; E-Commerce kept as an addition. ✅ RESOLVED
 - **P9 advantages (was note #5):** "Financial Stability" added as advantage 06. Website now carries a hybrid set (profile's five themes covered across six items with website wording). ✅ RESOLVED — wording final unless owner objects.
-- **P11 contact (note #6):** still placeholder on site (+971-XX-XXX-XXXX / info@rida.ae) — awaiting owner's real details. ⏳
+- **P11 contact (note #6):** still placeholder on site (+971-XX-XXX-XXXX / sales@ridame.com) — awaiting owner's real details. ⏳
 """
 
 out="/mnt/data/RIDA_Corporate_Profile.md"

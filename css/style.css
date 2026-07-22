@@ -1003,79 +1003,122 @@ p {
 }
 
 /* ─── 9. TRUST BAR ─── */
+/* Trust Bar – Continuous Logo Marquee */
 .trust-bar {
-  padding: 16px 0 10px;
-  background: var(--bg-gray-light);
-  overflow: hidden;
-  transition: background-color 0.4s ease;
   position: relative;
+  padding: var(--space-md) 0 var(--space-sm);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
 }
 
 .trust-bar-inner {
-  text-align: center;
   overflow: hidden;
   max-width: 100%;
   padding: 0;
+  width: 100%;
+}
+
+/* Track wrapper: two equal copies side-by-side, animated as one unit */
+.trust-marquee {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: trust-marquee-scroll 35s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .trust-logos {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 0;
-  animation: scroll-logos 25s linear infinite;
+  white-space: nowrap;
   width: max-content;
-  will-change: transform;
-  transform: translateZ(0);
-}
-
-.trust-logos:hover {
-  animation-play-state: paused;
+  flex-shrink: 0;
+  /* no nested animation — parent .trust-marquee moves */
+  animation: none !important;
+  transition: none;
 }
 
 .trust-logo-item {
-  flex-shrink: 0;
-  height: 40px;
-  opacity: 0.4;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease, opacity 0.3s ease, color 0.3s ease;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: var(--text-secondary);
   display: flex;
   align-items: center;
-  white-space: nowrap;
-  padding: 0 var(--space-lg);
+  justify-content: center;
+  flex-shrink: 0;
+  height: 56px;
+  padding: 0.35rem 1.5rem;
+  margin-right: 0;
   position: relative;
+  user-select: none;
+  opacity: 0.9;
+  transition: opacity 0.25s ease;
+  font-size: 0;
+  font-weight: normal;
+  text-transform: none;
+  letter-spacing: normal;
+  color: transparent;
 }
 
-.trust-logo-item::after {
-  content: '·';
-  position: absolute;
-  right: 0;
-  font-size: 1.6rem;
-  color: var(--muted-green);
-  opacity: 0.5;
-  font-weight: 400;
+.trust-logo-item img {
+  display: block;
+  height: 48px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  pointer-events: none;
 }
 
 .trust-logo-item:hover {
   opacity: 1;
-  filter: grayscale(0%);
-  color: var(--green-primary);
+  color: transparent;
+}
+
+/* No pseudo-dot separators — they break equal track widths / seamless loop */
+.trust-logo-item::after {
+  content: none !important;
+  display: none !important;
 }
 
 .trust-tagline {
-  margin-top: 8px;
-  margin-bottom: 0;
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  font-style: italic;
+  text-align: center;
+  color: var(--text-muted);
+  margin-top: var(--space-sm);
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
 }
 
-@keyframes scroll-logos {
-  0% { transform: translate3d(0, 0, 0); }
-  100% { transform: translate3d(-50%, 0, 0); }
+/* Move exactly one track width (-50% of two equal tracks) for a seamless loop */
+@keyframes trust-marquee-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* Keep scrolling always — no hover pause, no delay */
+.trust-bar:hover .trust-marquee,
+.trust-bar:hover .trust-logos {
+  animation-play-state: running !important;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .trust-marquee {
+    animation: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .trust-logos:last-child {
+    display: none;
+  }
 }
 
 /* ─── 10. ABOUT SECTION ─── */
@@ -2113,6 +2156,45 @@ p {
   margin-top: var(--space-md);
 }
 
+/* Contact cards as links */
+a.contact-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+a.contact-card:focus-visible {
+  outline: 2px solid var(--gold-primary);
+  outline-offset: 3px;
+}
+
+.contact-card-value {
+  line-height: 1.45;
+  word-break: break-word;
+}
+
+.contact-card--whatsapp {
+  border-color: rgba(37, 211, 102, 0.25);
+}
+
+.contact-card--whatsapp:hover {
+  border-color: #25D366;
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.2);
+}
+
+.contact-card--whatsapp .contact-card-icon {
+  color: #25D366;
+}
+
+.contact-card--whatsapp .contact-card-label {
+  color: #128C7E;
+}
+
+[data-theme="dark"] .contact-card--whatsapp .contact-card-label {
+  color: #25D366;
+}
+
+
 /* ─── 19. FOOTER ─── */
 .footer {
   background: var(--deep-teal);
@@ -2715,4 +2797,18 @@ p {
   .hero-title {
     font-size: 5.5rem;
   }
+}
+
+
+/* SEO: visually hidden but available to crawlers / AT (no UI change) */
+.seo-sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }

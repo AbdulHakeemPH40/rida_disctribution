@@ -567,12 +567,12 @@ h2 { font-weight: 700; font-size: clamp(2rem, 4vw, 3.4rem); }
 /* ─── 8. TRUST BAR ─── */
 .trust-bar { background: transparent; border-top: 1px solid rgba(31,122,77,.08); border-bottom: 1px solid rgba(31,122,77,.08); }
 .trust-logo-item {
-  color: var(--text-tertiary);
-  font-weight: 600;
-  filter: grayscale(1); opacity: .6;
-  transition: filter .3s ease, opacity .3s ease, color .3s ease;
+  filter: none;
+  opacity: 0.9;
+  transition: opacity .3s ease, transform .3s ease;
 }
-.trust-logo-item:hover { filter: grayscale(0); opacity: 1; color: var(--green-primary); }
+.trust-logo-item:hover { filter: none; opacity: 1; }
+.trust-logo-item img { filter: none; }
 
 /* ─── 9. TIMELINE / FRAMEWORK ─── */
 .timeline-dot {
@@ -2927,4 +2927,55 @@ html:not([data-theme="dark"]) #segments .segment-name {
 }
 html:not([data-theme="dark"]) #segments .segment-desc {
   color: rgba(10, 32, 20, 0.62);
+}
+
+
+/* Trust bar – supplier image logos (seamless continuous marquee) */
+.trust-logo-item {
+  font-size: 0 !important;
+  color: transparent !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  height: 56px;
+  padding: 0.35rem 1.5rem !important;
+  margin-right: 0 !important;
+}
+
+.trust-logo-item img {
+  display: block;
+  height: 48px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  filter: none;
+}
+
+.trust-logo-item:hover {
+  color: transparent !important;
+  opacity: 1;
+  transform: none; /* avoid layout jank mid-scroll */
+}
+
+.trust-logo-item::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Parent track owns the animation — never pause */
+.trust-marquee {
+  animation: trust-marquee-scroll 35s linear infinite !important;
+  animation-play-state: running !important;
+}
+
+.trust-logos {
+  animation: none !important;
+}
+
+.trust-bar:hover .trust-marquee,
+.trust-bar:hover .trust-logos {
+  animation-play-state: running !important;
+}
+
+[data-theme="dark"] .trust-logo-item img {
+  filter: brightness(1.06) contrast(1.02);
 }
