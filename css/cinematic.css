@@ -572,7 +572,15 @@ h2 { font-weight: 700; font-size: clamp(2rem, 4vw, 3.4rem); }
   transition: opacity .3s ease, transform .3s ease;
 }
 .trust-logo-item:hover { filter: none; opacity: 1; }
-.trust-logo-item img { filter: none; }
+.trust-logo-item img {
+  filter: grayscale(1) contrast(0.95) brightness(0.92);
+  opacity: 0.72;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+.trust-logo-item:hover img {
+  filter: grayscale(0.35) contrast(1) brightness(1);
+  opacity: 1;
+}
 
 /* ─── 9. TIMELINE / FRAMEWORK ─── */
 .timeline-dot {
@@ -2947,7 +2955,14 @@ html:not([data-theme="dark"]) #segments .segment-desc {
   width: auto;
   max-width: 140px;
   object-fit: contain;
-  filter: none;
+  filter: grayscale(1) contrast(0.95) brightness(0.92);
+  opacity: 0.72;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.trust-logo-item:hover img {
+  filter: grayscale(0.35) contrast(1) brightness(1);
+  opacity: 1;
 }
 
 .trust-logo-item:hover {
@@ -2977,5 +2992,11 @@ html:not([data-theme="dark"]) #segments .segment-desc {
 }
 
 [data-theme="dark"] .trust-logo-item img {
-  filter: brightness(1.06) contrast(1.02);
+  filter: grayscale(1) contrast(0.95) brightness(1.08);
+  opacity: 0.78;
+}
+
+[data-theme="dark"] .trust-logo-item:hover img {
+  filter: grayscale(0.35) contrast(1) brightness(1.1);
+  opacity: 1;
 }

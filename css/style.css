@@ -1069,11 +1069,19 @@ p {
   max-width: 140px;
   object-fit: contain;
   pointer-events: none;
+  filter: grayscale(1) contrast(0.95) brightness(0.92);
+  opacity: 0.72;
+  transition: filter 0.3s ease, opacity 0.3s ease;
 }
 
 .trust-logo-item:hover {
   opacity: 1;
   color: transparent;
+}
+
+.trust-logo-item:hover img {
+  filter: grayscale(0.35) contrast(1) brightness(1);
+  opacity: 1;
 }
 
 /* No pseudo-dot separators — they break equal track widths / seamless loop */
